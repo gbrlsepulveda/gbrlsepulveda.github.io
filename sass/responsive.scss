@@ -1,0 +1,137 @@
+@import "compass/css3";
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+    .colunaFlex {
+        width: 100%;
+        display: inline-block;
+        padding: 15px;
+        padding-left: 200px;
+        margin-bottom: 25px;
+        @include border-radius(15px);
+        @include box-sizing(border-box);
+        .iconText {
+            // position: absolute;
+            // left: 25px;
+        }
+    }
+    .myLife { padding: 50px 25px; }
+    .about {
+        padding-top: 250px;
+        padding-bottom: 30px;
+        height: 560px;
+        color: #fff;
+        display: table-cell;
+        vertical-align: middle;
+        position: fixed;
+        top:0;
+        width: 100%;
+        p {
+            font-size: 4em;
+            line-height: 1.3em;
+            margin: 15px 0;
+            @include text-shadow(1px 1px 0px #000);
+            &.bigger {
+                font-size: 6em;
+                margin-bottom: 100px;
+            }
+        }
+    }
+    .content {
+        position: relative;
+        margin-top: 610px;
+        padding: 50px 0;
+        z-index: 5;
+        //@include box-shadow(0px -3px 5px rgba(0,0,0,0.5));
+    }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 1000px) {
+
+}
+
+@media only screen and (min-width: 1000px) {
+    h1 { padding-top: 40px; }
+    #wrapper { padding-top: 0; }
+    #nav {
+        position: relative;
+        background: none;
+        display: block;
+        float: right;
+        left: auto;
+        top: 25px;
+        width: auto;
+    }
+    .nav-link {
+        background: rgba(0, 0, 0, 0.05);
+        padding: 25px 20px;
+        @include box-shadow(none);
+        &:before { content: ''; }
+        &:hover {
+            background: rgba(0, 50, 60, 0.5);
+        }
+    }
+    .icon-nav { display: none; }
+    .nav-item {
+        float: left;
+    }
+    .header {
+        position: relative;
+        height: 120px;
+        @include box-sizing(border-box);
+    }
+    .bgMain {
+        display: none;
+        position: absolute;
+        width: 125%;
+        height: 125%;
+        background: #CCC;
+        top: -50%;
+        left: -50%;
+        @include transform(rotate(-45deg));
+    }
+    .main {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        background: #FFF;
+    }
+    .center {
+        position: relative;
+        width: 960px;
+        margin: 0 auto;
+    }
+    .boxFlex {
+        width: 32%;
+        padding: 15px;
+        @include box-sizing(border-box);
+        h3 {
+            line-height: 1.3em;
+            margin: -10px 0 15px;
+            padding-bottom: 15px;
+            text-align: center;
+        }
+    }
+    .iconText {
+        position: relative;
+        top: -35px;
+    }
+    .job {
+        //padding: 0px;
+    }
+    .job-img {
+        @include transition( all 0.4s ease-out);
+        @include transform(scale(1));
+    }
+}
+
+@media only screen and (min-width: 1180px) {
+    .center {
+        width: 1140px;
+    }
+    .module {
+        margin: 50px 0;
+    }
+}
