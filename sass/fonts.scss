@@ -2,8 +2,8 @@
     font-family: 'icomoon';
     src:url('../fonts/icomoon.eot');
     src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/icomoon.ttf') format('truetype'),
         url('../fonts/icomoon.woff') format('woff'),
+        url('../fonts/icomoon.ttf') format('truetype'),
         url('../fonts/icomoon.svg#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
@@ -52,4 +52,40 @@
 }
 .icon-windows8:before {
     content: "\e609";
+}
+.icon-search:before {
+    content: "\e60a";
+}
+.icon-zoom-in:before {
+    content: "\e60b";
+}
+.icon-share:before {
+    content: "\e60c";
+}
+.icon-html5:before {
+    content: "\e60d";
+}
+.icon-html52:before {
+    content: "\e60e";
+}
+.icon-css3:before {
+    content: "\e60f";
+}
+.icon-chrome:before {
+    content: "\e610";
+}
+.icon-firefox:before {
+    content: "\e611";
+}
+.icon-opera:before {
+    content: "\e612";
+}
+.icon-safari:before {
+    content: "\e613";
+}
+.icon-reply:before {
+    content: "\e616";
+}
+.icon-forward:before {
+    content: "\e617";
 }

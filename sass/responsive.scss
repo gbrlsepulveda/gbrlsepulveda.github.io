@@ -3,21 +3,44 @@
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 480px) {
-    .colunaFlex {
+@media only screen and (max-width: 479px) {
+    h2 {
+        font-size: 2.6rem;
+    }
+    #quem-sou {
+        p {
+            font-size: 1.6rem;
+            &.bigger {
+                font-size: 2.2rem;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 500px) {
+
+}
+@media only screen and (min-width: 480px) and (max-width: 720px) {
+    #quem-sou {
+        p {
+            font-size: 1.5rem;
+            &.bigger {
+                font-size: 2.5rem;
+            }
+        }
+    }
+    .coluna-flex {
         width: 100%;
         display: inline-block;
         padding: 15px;
         padding-left: 200px;
         margin-bottom: 25px;
         @include border-radius(15px);
-        @include box-sizing(border-box);
-        .iconText {
+        .ico-text {
             // position: absolute;
             // left: 25px;
         }
     }
-    .myLife { padding: 50px 25px; }
+    .my-life { padding: 50px 25px; }
     .about {
         padding-top: 250px;
         padding-bottom: 30px;
@@ -29,12 +52,12 @@
         top:0;
         width: 100%;
         p {
-            font-size: 4em;
-            line-height: 1.3em;
+            font-size: 4rem;
+            line-height: 1.3rem;
             margin: 15px 0;
             @include text-shadow(1px 1px 0px #000);
             &.bigger {
-                font-size: 6em;
+                font-size: 6rem;
                 margin-bottom: 100px;
             }
         }
@@ -49,7 +72,28 @@
 }
 
 @media only screen and (min-width: 720px) and (max-width: 1000px) {
+    #quem-sou {
+        p {
+            font-size: 2rem;
+            &.bigger {
+                font-size: 3rem;
+            }
+        }
+    }
+}
 
+@media only screen and (max-width: 1000px) {
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1em;
+    }
+    h3 {
+        position: relative;
+        padding: 5px 10px;
+        background: rgba(0,0,0,0.75);
+        color: #fff;
+        z-index: 10;
+    }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -58,7 +102,7 @@
     #nav {
         position: relative;
         background: none;
-        display: block;
+        clear: none;
         float: right;
         left: auto;
         top: 25px;
@@ -69,20 +113,19 @@
         padding: 25px 20px;
         @include box-shadow(none);
         &:before { content: ''; }
-        &:hover {
+        &:hover, &:focus {
             background: rgba(0, 50, 60, 0.5);
         }
     }
-    .icon-nav { display: none; }
+    .ico-nav { display: none; }
     .nav-item {
         float: left;
     }
     .header {
         position: relative;
         height: 120px;
-        @include box-sizing(border-box);
     }
-    .bgMain {
+    .bg-main {
         display: none;
         position: absolute;
         width: 125%;
@@ -92,31 +135,12 @@
         left: -50%;
         @include transform(rotate(-45deg));
     }
-    .main {
-        position: relative;
-        width: 100%;
-        margin: 0 auto;
-        background: #FFF;
-    }
-    .center {
-        position: relative;
-        width: 960px;
-        margin: 0 auto;
-    }
-    .boxFlex {
+    .box-flex {
         width: 32%;
-        padding: 15px;
-        @include box-sizing(border-box);
         h3 {
-            line-height: 1.3em;
-            margin: -10px 0 15px;
+            margin-top: 75px;
             padding-bottom: 15px;
-            text-align: center;
         }
-    }
-    .iconText {
-        position: relative;
-        top: -35px;
     }
     .job {
         //padding: 0px;
@@ -126,12 +150,14 @@
         @include transform(scale(1));
     }
 }
-
+@media only screen and (min-width: 1000px) and (max-width: 1100px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    .nav-link {
+        padding: 15px 10px;
+    }
+}
 @media only screen and (min-width: 1180px) {
-    .center {
-        width: 1140px;
-    }
-    .module {
-        margin: 50px 0;
-    }
+
 }

@@ -1,23 +1,14 @@
-//verifico a resolução do usuário
-//se for maior que 960 exibo o background preto na diagonal da tela
-
-if ($(window).width() > 960) {
-	// $(".about").css("height", $(window).height());
-} else {
-	// $(".header").slideDown(1000);
-}
-
-var navIcon = $(".icon-nav");
-var nav = $("#nav");
-var navLink = $(".nav-a");
-$(navIcon).on("click", function () {
-	$(nav).slideToggle(500)
-});
+// var navIcon = $(".ico-nav");
+// var nav = $("#nav");
+// var navLink = $(".nav-a");
+// $(navIcon).on("click", function () {
+// 	$(nav).slideToggle(500)
+// });
 
 
-$(navLink).on("click", function () {
-	console.log($(this).attr("data-anchor"));
-});
+// $(navLink).on("click", function () {
+// 	console.log($(this).attr("data-anchor"));
+// });
 
 
 WebFontConfig = {
