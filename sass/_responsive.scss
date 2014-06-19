@@ -105,7 +105,9 @@
 }
 
 @media only screen and (min-width: 1001px) {
-    .main { background-image: inline-image("../images/bg.jpg"); }
+    .main {
+        background-image: inline-image("../images/bg.jpg");
+    }
     h1 { padding-top: 40px; }
     #wrapper { padding-top: 0; }
     #nav {
