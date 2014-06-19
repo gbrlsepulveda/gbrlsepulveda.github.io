@@ -21,10 +21,12 @@
         }
     }
 }
-#o-que-eu-faco {
-    // border-top: 15px rgba(0,0,0,0.1) solid;
-    @include box-shadow(0 0px 35px 1px rgba(0,0,0,0.3));
-    @include background-image(linear-gradient(top,  rgba(0,0,0,0.075) 0%,rgba(0,0,0,0) 100%));
+@media only screen and (min-width: 720px) {
+    #o-que-eu-faco {
+        // border-top: 15px rgba(0,0,0,0.1) solid;
+        @include box-shadow(0 0px 35px 1px rgba(0,0,0,0.3));
+        @include background-image(linear-gradient(top,  rgba(0,0,0,0.075) 0%,rgba(0,0,0,0) 100%));
+    }
 }
 
 /* ==========================================================================

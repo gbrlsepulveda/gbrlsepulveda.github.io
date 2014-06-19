@@ -4,9 +4,7 @@
    ========================================================================== */
 
 @media only screen and (max-width: 479px) {
-    h2 {
-        font-size: 2.6rem;
-    }
+    h2 { font-size: 2.2rem; }
     p {
         font-size: 1.3rem;
         &.big {
@@ -16,24 +14,15 @@
     }
     #quem-sou {
         p {
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             &.bigger {
-                font-size: 2.2rem;
+                font-size: 2rem;
             }
         }
     }
 }
-@media only screen and (max-width: 500px) {
-    .box-content {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-}
 @media only screen and (min-width: 480px) and (max-width: 719px) {
-    .box-content {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
+    h2 { font-size: 2.5rem; }
     #quem-sou {
         p {
             font-size: 1.5rem;
@@ -86,10 +75,6 @@
 }
 
 @media only screen and (min-width: 720px) and (max-width: 1000px) {
-    .box-content {
-        padding-left: 7%;
-        padding-right: 7%;
-    }
     #quem-sou {
         p {
             font-size: 2rem;
@@ -99,7 +84,12 @@
         }
     }
 }
-
+@media only screen and (min-width: 720px) and (max-width: 1179px) {
+    .box-content {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+}
 @media only screen and (max-width: 1000px) {
     h1 {
         font-size: 2rem;
@@ -115,10 +105,7 @@
 }
 
 @media only screen and (min-width: 1001px) {
-    .box-content {
-        padding-left: 10%;
-        padding-right: 10%;
-    }
+    .main { background-image: inline-image("../images/bg.jpg"); }
     h1 { padding-top: 40px; }
     #wrapper { padding-top: 0; }
     #nav {
@@ -181,5 +168,8 @@
     }
 }
 @media only screen and (min-width: 1180px) {
-
+    .box-content {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
 }

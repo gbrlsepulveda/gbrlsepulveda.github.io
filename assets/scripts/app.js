@@ -28,7 +28,7 @@
 
 WebFontConfig = {
     google: {
-        families: ['Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700']
+        families: ['Open+Sans:300,400']
     }
 };
 (function () {

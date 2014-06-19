@@ -1,6 +1,6 @@
 @import "compass/reset";
 @import "compass/css3";
-@import "variaveis.scss";
+@import "_variaveis.scss";
 
 *,
 *:before,
@@ -17,6 +17,7 @@ body {
     text-align: left;
     background-size: 100% auto;
     overflow-y: scroll;
+    @include backface-visibility(hidden);
  }
 
 //text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
@@ -82,8 +83,11 @@ article, a, button, li, section, div, span, h2 {
     position: relative;
     width: 100%;
     z-index: 1;
-    background: #ddd url("../images/bg.jpg");
-    @include box-shadow(inset 0px 0px 150px 1px rgba(0,0,0,0.3));
+    background: #eee;
+}
+.box-content {
+    padding-left: 5%;
+    padding-right: 5%;
 }
 #social {
     padding: 5px 0 25px;
@@ -99,15 +103,13 @@ article, a, button, li, section, div, span, h2 {
 }
 .social-link {
     display: inline-block;
-    width: 55px;
-    height: 55px;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 700;
     text-align: center;
     text-decoration: none;
     background: $background;
     color: #fff;
-    padding: 12px 6px 5px;
+    padding: 0.7rem;
     @include border-radius(100px);
     &:hover, &:focus {
         background: $backgroundDark;
@@ -186,11 +188,11 @@ img {
 
 
 
-@import "grid-flex.scss";
-@import "texts.scss";
-@import "content.scss";
-@import "responsive.scss";
-@import "fonts.scss";
+@import "_grid-flex.scss";
+@import "_texts.scss";
+@import "_content.scss";
+@import "_responsive.scss";
+@import "_fonts.scss";
 
 
 
