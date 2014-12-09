@@ -1,7 +1,7 @@
 {
     "name": "GabrielSepulveda",
     "version": "1.0",
-    "description": "Portifolio",
+    "description": "Portfolio",
     "launch_path": "/index.html",
     "permissions": {
         "storage": {
