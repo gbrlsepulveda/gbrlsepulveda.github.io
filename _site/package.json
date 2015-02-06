@@ -1,0 +1,12 @@
+{
+	"name": "Portifa",
+	"version": "1.0.0",
+	"description": "My personal page",
+	"homepage": "http://gbrlsepulveda.github.io/",
+	"main": "index.html",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/gbrlsepulveda/gbrlsepulveda.github.io"
+	},
+	"author": "Gabriel Sepulveda"
+}

@@ -1,0 +1,21 @@
+<header class="header box-content" role="banner">
+
+    <h1 class="title"><a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+
+      <div class="trigger">
+        {% for page in site.pages %}
+          {% if page.title %}
+          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+    <nav id="nav" role="nav">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#about-me" class="nav-link" data-anchor="projects">Quem sou</a></li>
+            <li class="nav-item"><a href="#o-que-eu-faco" class="nav-link" data-anchor="jobs">O que faço</a></li>
+            <li class="nav-item"><a href="#jobs" class="nav-link" data-anchor="cool">Alguns projetos</a></li>
+        </ul>
+    </nav>
+
+</header>

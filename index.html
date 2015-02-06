@@ -1,203 +1,23 @@
-<!DOCTYPE html>
-<html class="no-js" lang="pt-br">
-    <head>
-        <meta charset="utf-8">
+---
+layout: default
+---
 
-        <title>Gabriel Sepulveda | Front-End Developer</title>
+<div class="home">
 
-        <meta name="description" content="Gabriel Sepulveda, Desenvolvedor Front-End, trabalha com desenvolvimento web desde 2009 e atualmente trabalha na B4P."/>
-        <meta name="keywords" content="developer, desenvolvedor, front-end, html5, javascript, css3, webmobile, responsivo, rj, rio de janeiro" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="Gabriel Sepulveda" />
+  <h1 class="page-heading">Posts</h1>
 
-        <!-- for Facebook -->
-        <meta property='og:locale' content='pt_BR'/>
-        <meta property="og:title" content="Gabriel Sepulveda | Front-End Developer" />
-        <meta property="og:type" content="article" />
-        <meta property="og:image" content="https://lh5.googleusercontent.com/-StJPyczR_sk/AAAAAAAAAAI/AAAAAAAAAnk/4hWbq5JZSvs/s120-c/photo.jpg" />
-        <meta property="og:url" content="http://gabrielsepulveda.com.br/" />
-        <meta property="og:description" content="Gabriel Sepulveda, Desenvolvedor Front-End, trabalha com desenvolvimento web desde 2009 e atualmente trabalha na B4P." />
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-        <!-- for Twitter -->
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Gabriel Sepulveda | Front-End Developer" />
-        <meta name="twitter:description" content="Gabriel Sepulveda, Desenvolvedor Front-End, trabalha com desenvolvimento web desde 2009 e atualmente trabalha na B4P." />
-        <meta name="twitter:image" content="https://lh5.googleusercontent.com/-StJPyczR_sk/AAAAAAAAAAI/AAAAAAAAAnk/4hWbq5JZSvs/s120-c/photo.jpg" />
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
 
-        <link rel="author" href="https://plus.google.com/u/0/111231457098834630949"/>
-        <link rel="icon" href="favicon.ico">
-        <link rel="stylesheet" href="assets/styles/screen.css">
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-        <script src="assets/scripts/vendor/modernizr.custom.30395.js"></script>
-
-    </head>
-    <body>
-
-
-        <header class="header box-content" role="banner">
-
-            <h1 class="title">Gabriel Sepulveda</h1>
-
-            <nav id="nav" role="nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#about-me" class="nav-link" data-anchor="projects">Quem sou</a></li>
-                    <li class="nav-item"><a href="#o-que-eu-faco" class="nav-link" data-anchor="jobs">O que faço</a></li>
-                    <li class="nav-item"><a href="#jobs" class="nav-link" data-anchor="cool">Alguns projetos</a></li>
-                </ul>
-            </nav>
-
-        </header>
-
-
-
-        <main id="main" class="main" role="main">
-
-
-            <section id="quem-sou" class="box-content">
-
-                <p class="bigger">Olá, meu nome é Gabriel Sepulveda, tenho 24 anos, sou <em>Front-End Developer.</em></p>
-
-                <p>Atualmente trabalho na <a href="http://www.ideais.com.br/" target="_blank">Ideais</a>, cuidando dos maiores e-commerces da América Latina.</p>
-
-            </section><!-- #quem-sou -->
-
-
-
-            <section id="about-me" class="box-content">
-
-                <h2>Quem eu sou</h2>
-
-                <p class="big">Entrei no mercado de desenvolvimento em 2010, sou Técnologo em Sistemas para Internet, cursado na Estácio de Sá. Atualmente, estou cursando Sistemas de Informação na mesma universidade, com previsão de conclusão para o primeiro semestre de 2015.</p>
-
-                <p class="big">Front-end Developer, sou adepto e defensor de Graceful Degradation, boas práticas, semântica, usabilidade e performance. Focado em levar sempre a melhor experiência para o usuário, desenvolvendo interfaces ricas, responsivas e semânticas.</p>
-
-                <p class="big">Acompanhe minha trajetória, meus projetos e experimentos, me siga nas redes sociais.</p>
-
-                <ul id="social">
-                    <li class="social-item">
-                        <a title="Google+" href="https://plus.google.com/+GabrielSepulvedaMeneses/?rel=author" class="social-link" target="_blank"><span class="icon-google-plus"></span></a>
-                    </li>
-
-                    <li class="social-item">
-                        <a title="Twitter" href="http://www.twitter.com/gbrlsepulveda" class="social-link" target="_blank"><span class="icon-twitter"></span></a>
-                    </li>
-
-                    <li class="social-item">
-                        <a title="LinkedIn" href="http://br.linkedin.com/pub/gabriel-sepulveda/36/7b6/61b" class="social-link" target="_blank"><span class="icon-linkedin"></span></a>
-                    </li>
-
-                    <li class="social-item">
-                        <a title="Github" href="http://www.github.com/gbrlsepulveda" class="social-link" target="_blank"><span class="icon-github2"></span></a>
-                    </li>
-
-                    <li class="social-item">
-                        <a title="E-mail: gabrielsepulveda07@gmail.com" href="mailto:gabrielsepulveda07@gmail.com" class="social-link"><span class="icon-mail"></span></a>
-                    </li>
-                </ul>
-
-            </section><!-- #about-me -->
-
-
-
-            <section id="o-que-eu-faco" class="box-content">
-
-                <h2>O que eu faço</h2>
-
-                <div class="grid-flex">
-
-                    <article class="box-flex">
-
-                        <header class="box-cover box-ux">
-                            <span class="ico-text">UX</span>
-                            <h3>Experiência do Usuário</h3>
-                        </header>
-
-                        <p>Design de Interação, Usabilidade, Arquitetura de Informação, Design de Interfaces, pesquisas, metodologias, documentações, e tudo aquilo que envolve as facetas da experiência do usuário.</p>
-
-                    </article>
-
-
-                    <article class="box-flex">
-
-                        <header class="box-cover box-webdev">
-                            <span class="ico-text">&lt;/&gt;</span>
-                            <h3>Desenvolvimento</h3>
-                        </header>
-
-                        <p>Semântica, inovação. acessibilidade, performance, tecnologia. Esta é a fórmula para desenvolver sites estruturados, intuitivos e rápidos. Páginas desenvolvidos nas tecnologias mais modernas como HTML5 e CSS3.</p>
-
-                    </article>
-
-
-                    <article class="box-flex">
-
-                        <header class="box-cover box-responsive">
-                            <span class="ico-text">%</span>
-                            <h3>Sites Responsivos</h3>
-                        </header>
-
-                        <p>Vivemos a era dos smartphones, tablets e outros dispositivos móveis. São muitos os aparelhos, sistemas operacionais e navegadores. Graças a um conjunto de técnicas modernas, você poderá oferecer a experiência de navegação ideal para cada dispositivo.</p>
-
-                    </article>
-
-                </div><!-- grid-flex -->
-
-            </section><!-- o-que-faco -->
-
-
-
-            <section id="jobs" class="box-content">
-
-                <h2>Alguns Projetos</h2>
-
-                <div class="grid-flex">
-
-                    <article class="job box-flex">
-                        <figure><img src="assets/images/job-1.jpg" alt="Projeto - Espaço Flávia Ramos" class="job-img"></figure>
-                        <div class="job-description">
-                            <h4>Espaço Flávia Ramos - B4P</h4>
-                            <a href="http://www.espacoflaviaramos.com.br" class="goto" target="_blank"><span class="icon-forward"></span>Visitar</a>
-                        </div>
-                    </article>
-
-                    <article class="job box-flex">
-                        <figure><img src="assets/images/job-2.jpg" alt="Projeto - Ravi's Lanches" class="job-img"></figure>
-                        <div class="job-description">
-                            <h4>Ravi's Lanches - B4P</h4>
-                            <a href="http://www.ravis.com.br" class="goto" target="_blank"><span class="icon-forward"></span>Visitar</a>
-                        </div>
-                    </article>
-
-                    <article class="job box-flex">
-                        <figure><img src="assets/images/job-3.jpg" alt="Projeto - Beleza Criativa" class="job-img"></figure>
-                        <div class="job-description">
-                            <h4>Beleza Criativa - B4P</h4>
-                            <a href="http://www.belezacriativa.com.br" class="goto" target="_blank"><span class="icon-forward"></span>Visitar</a>
-                        </div>
-                    </article>
-
-                </div><!-- projects -->
-
-            </section><!-- jobs -->
-
-
-
-        </main><!-- #main -->
-
-
-
-        <footer class="footer box-content" role="contentinfo">
-
-            <h2>Entre em contato</h2>
-
-            <h5>Gabriel Sepulveda - gabrielsepulveda07@gmail.com</h5>
-
-            <small>Hospedado com <a href="http://pages.github.com/" target="_blank">Github Pages</a></small>
-
-        </footer><!-- footer -->
-
-
-        <script src="assets/scripts/app.js"></script>
-        <script defer src="http://sawpf.com/1.0.js"></script>
-    </body>
-</html>
+</div>
