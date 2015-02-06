@@ -28,7 +28,12 @@ code {
 }
 
 code {
-    padding: 1px 5px;
+    font-family: monospace;
+    padding: 5px 7px;
+    background: #fff;
+    border: 1px #ccc solid;
+    border-radius: 3px;
+    vertical-align: middle;
 }
 
 pre {
