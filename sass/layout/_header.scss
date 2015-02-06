@@ -1,0 +1,44 @@
+.header {
+    width: 100%;
+    background: $background;
+    @include box-shadow(0px 3px 5px rgba(0,0,0,0.5));
+    color: #fff;
+    z-index: 10;
+    .title {
+        float: left;
+    }
+}
+#nav {
+    position: relative;
+    clear: both;
+    width: 100%;
+    padding: 0px;
+    background: #777;
+}
+.nav-item {
+    display: block;
+    border-top: 1px $background solid;
+}
+.nav-link {
+    display: block;
+    text-decoration: none;
+    font-size: $txtP;
+    padding: 15px;
+    color: #fff;
+    background: $backgroundLight;
+    &:hover,
+    &:focus {
+        background: rgba(0, 50, 60, 0.5);
+    }
+}
+.ico-nav {
+    position: relative;
+    float: right;
+    width: 50px;
+    height: 30px;
+    right: 25px;
+    top: 10px;
+    //background: #ccc;
+    display: block;
+    cursor: pointer;
+}

@@ -1,0 +1,31 @@
+@import "compass/reset";
+
+*,
+*:before,
+*:after {
+    @include box-sizing(border-box);
+}//FTW
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font: 62.5%/1.3rem 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    text-align: left;
+    background-size: 100% auto;
+    overflow-y: scroll;
+ }
+
+//text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+
+/* ==========================================================================
+   Geral
+   ========================================================================== */
+
+article, a, button, li, section, div, span, h2 {
+    @include transition( all 0.3s ease-out);
+    &:hover, &:focus {
+        @include transition( all 0.3s ease-in);
+    }
+}
