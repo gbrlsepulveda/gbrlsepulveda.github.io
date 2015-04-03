@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<section class="box-content">
+
+    <h1 class="page-heading">Posts</h1>
+
+    {% for post in site.posts %}
+    <article>
+
+        <header>
+            <h2>
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}#disqus_thread" data-disqus-identifier="{{ post.title }}">{{ post.title }}</a>
+            </h2>
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        </header>
+
+        <span class="disqus-comment-count" data-disqus-identifier="article_1_identifier">First article</span>
+        <span class="disqus-comment-count" data-disqus-url="{{ post.url | prepend: site.baseurl }}">First article</span>
+
+        <p>{{post.excerpt}}</p>
+    </article>
+    {% endfor %}
+
+</section>

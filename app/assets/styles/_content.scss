@@ -1,5 +1,3 @@
-@import "compass/css3";
-
 .box-content {
     width: 100%;
 }
@@ -31,15 +29,15 @@
         left: 0;
         width: 100%;
         height: 100%;
-        @include filter-gradient(#a60000, #000000, vertical); // IE6-9
-        @include background-image(linear-gradient(top,  rgba(0,0,0,.6) 0%,rgba(0,0,0,.3) 100%));
+        //@include filter-gradient(#a60000, #000000, vertical); // IE6-9
+        //@include background-image(linear-gradient(top,  rgba(0,0,0,.6) 0%,rgba(0,0,0,.3) 100%));
     }
 }
 @media only screen and (min-width: 720px) {
     #o-que-eu-faco {
         // border-top: 15px rgba(0,0,0,0.1) solid;
         @include box-shadow(0 0px 35px 1px rgba(0,0,0,0.3));
-        @include background-image(linear-gradient(top,  rgba(0,0,0,0.075) 0%,rgba(0,0,0,0) 100%));
+        //@include background-image(linear-gradient(top,  rgba(0,0,0,0.075) 0%,rgba(0,0,0,0) 100%));
     }
 }
 

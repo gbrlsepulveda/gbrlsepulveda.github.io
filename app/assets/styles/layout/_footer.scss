@@ -20,8 +20,8 @@
         left: 0;
         width: 100%;
         height: 100%;
-        @include filter-gradient(#a60000, #000000, vertical); // IE6-9
-        @include background-image(linear-gradient(top,  rgba(0,0,0,.6) 0%,rgba(0,0,0,.3) 100%));
+        // @include filter-gradient(#a60000, #000000, vertical); // IE6-9
+        // @include background-image(linear-gradient(top,  rgba(0,0,0,.6) 0%,rgba(0,0,0,.3) 100%));
         z-index: 0;
     }
 }
