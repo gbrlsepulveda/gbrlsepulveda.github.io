@@ -1,44 +1,70 @@
 .header {
-    width: 100%;
-    background: $background;
-    @include box-shadow(0px 3px 5px rgba(0,0,0,0.5));
+    @include center(100%, $pad-mobile);
+    @include cf;
+    @include box-shadow(0px 3px 5px rgba(0, 0, 0, 0.5));
     color: #fff;
     z-index: 10;
+    background: $color-primary;
+    @include breakpoint(laptop) {
+        height: 100px;
+    }
     .title {
-        float: left;
+        a { text-decoration: none; }
+        @include breakpoint (tablet) {
+            @include col(1/3);
+        }
+        @include breakpoint (laptop) {
+            @include col(1/2);
+        }
     }
 }
 #nav {
-    position: relative;
-    clear: both;
-    width: 100%;
-    padding: 0px;
-    background: #777;
-}
-.nav-item {
-    display: block;
-    border-top: 1px $background solid;
-}
-.nav-link {
-    display: block;
-    text-decoration: none;
-    font-size: $txtP;
-    padding: 15px;
-    color: #fff;
-    background: $backgroundLight;
-    &:hover,
-    &:focus {
-        background: rgba(0, 50, 60, 0.5);
+    // background: #777;
+    margin-top: 15px;
+    @include cf;
+    @include breakpoint (tablet) {
+        margin-top: 0;
+        @include col(2/3);
     }
-}
-.ico-nav {
-    position: relative;
-    float: right;
-    width: 50px;
-    height: 30px;
-    right: 25px;
-    top: 10px;
-    //background: #ccc;
-    display: block;
-    cursor: pointer;
+    @include breakpoint(laptop) {
+        @include col(1/2);
+        margin-top: 23px;
+        text-align: right;
+        word-spacing: 0;
+    }
+    .nav-item {
+        display: block;
+        border-top: 1px $background solid;
+        @include breakpoint(laptop) {
+            display: inline-block;
+            word-spacing: 0;
+        }
+    }
+    .nav-link {
+        display: block;
+        text-decoration: none;
+        font-size: $txtP;
+        padding: 15px;
+        color: #fff;
+        background: $backgroundLight;
+        @include breakpoint(laptop) {
+            background: rgba(0, 0, 0, 0.05);
+            padding: 15px 20px;
+        }
+        &:hover, &:focus {
+            color: $color-primary;
+            background: rgba(0, 50, 60, 0.5);
+        }
+    }
+    .ico-nav {
+        position: relative;
+        float: right;
+        width: 50px;
+        height: 30px;
+        right: 25px;
+        top: 10px;
+        //background: #ccc;
+        display: block;
+        cursor: pointer;
+    }
 }

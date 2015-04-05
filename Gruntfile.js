@@ -42,21 +42,20 @@ module.exports = function(grunt) {
             },
         },
 
-        // copy: {
-        //     dist: {
-        //         files: [{
-        //             expand: true,
-        //             cwd: 'app/',
-        //             src: [
-        //                 '**',
-        //                 '*.{md,txt,htaccess}',
-        //                 '!assets/scripts/**/*',
-        //             ],
-        //             dest: '_site',
-        //             dot: true
-        //         }]
-        //     }
-        // },
+        copy: {
+            dist: {
+                files: [{
+                    expand: true,
+                    cwd: 'app/assets/',
+                    src: [
+                        'fonts/**/*',
+                        'images/**/*',
+                    ],
+                    dest: '_site/assets/',
+                    dot: true
+                }]
+            }
+        },
 
         htmlmin: {
             dist: {
@@ -145,21 +144,25 @@ module.exports = function(grunt) {
             options: {
                 livereload: true
             },
+            copy: {
+                files: [
+                    'app/assets/fonts/**/*',
+                    'app/assets/images/**/*'
+                ],
+                tasks: ['newer:copy']
+            },
             js: {
                 files: 'app/assets/scripts/**/*',
                 tasks: ['newer:concat:dist']
             },
             jekyll: {
                 files: [
-                    'app/src/_includes/',
-                    'app/src/_layouts/',
-                    'app/src/_posts/',
-                    'app/src/_sass/'
+                    'app/src/**/*'
                 ],
-                tasks: ['jekyll']
+                tasks: ['build']
             },
             sass: {
-                files: ['app/assets/styles/'],
+                files: ['app/assets/styles/**/*'],
                 tasks: ['sass']
             },
             grunt: {
@@ -178,9 +181,9 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build', [
         'clean',
-        //'copy:dist',
         'jekyll',
         'sass',
+        'copy:dist',
         'uglify:dist',
         'htmlmin:dist',
         'imagemin:dist'

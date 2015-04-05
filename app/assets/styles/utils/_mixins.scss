@@ -1,90 +1,41 @@
-@mixin placeholder($color){
-    &::-webkit-input-placeholder { color: $color; }
-    &:-moz-placeholder { color: $color; }/* Firefox 18- */
-    &::-moz-placeholder { color: $color; }/* Firefox 19+ */
-    &:-ms-input-placeholder { color: $color; }
-    &::placeholder { color: $color; }
-}
+@mixin placeholder($color) {
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+    &:-moz-placeholder {
+        color: $color;
+    }
 
+    /* Firefox 18- */
+    &::-moz-placeholder {
+        color: $color;
+    }
+
+    /* Firefox 19+ */
+    &:-ms-input-placeholder {
+        color: $color;
+    }
+    &::placeholder {
+        color: $color;
+    }
+}
 @mixin keyframes($name) {
-    @-webkit-keyframes $name { @content; }
-    @-moz-keyframes $name { @content; }
-    @-ms-keyframes $name { @content; }
-    @keyframes $name { @content; }
+    @-webkit-keyframes $name {
+        @content;
+    }
+    @-moz-keyframes $name {
+        @content;
+    }
+    @-ms-keyframes $name {
+        @content;
+    }
+    @keyframes $name {
+        @content;
+    }
 }
-
-@mixin paint($background-color: #000, $text-color: #fff) {
+@mixin paint($background-color:#000, $text-color:#fff) {
     background-color: $background-color;
     color: $text-color;
-}
-
-
-
-
-/*
- * 'rem' is a Sass mixin that converts pixel values to rem values for whatever property is passed to it.
- * It returns two lines of code — one of the regular pixel values (for IE), and another with the
- * converted rem values (for everyone else). Special thanks to Chris Epstein (http://chriseppstein.github.com)
- * and Martin Bavio (http://martinbavio.com) for the help and code!
- *
- * Sample input:
- * .element {
- *   @include rem('padding',10px 0 2px 5px);
- * }
- *
- * Sample output:
- * .element {
- *   padding: 10px 0 2px 5px;
- *   padding: 1rem 0 0.2rem 0.5rem;
- * }
- *
- */
-
-/*
-    'Rem' is like 'em', but is only relative to body tag
-*/
-
-// Baseline, measured in pixels
-// The value should be the same as the font-size value for the html element
-// If the html element's font-size is set to 62.5% (of the browser's default font-size of 16px),
-// then the variable below would be 10px.
-$baseline_px: 16px;
-
-@mixin rem($property, $px_values) {
-
-    // Convert the baseline into rems
-    $baseline_rem: ($baseline_px / 1rem);
-
-    // Print the first line in pixel values
-    #{$property}: $px_values;
-
-    // If there is only one (numeric) value, return the property/value line for it.
-    @if type-of($px_values) == 'number' {
-        #{$property}: $px_values / $baseline_rem;
-    }
-
-    // If there is more than one value, create a list and perform equations on each value
-    @else {
-
-        // Create an empty list that we can dump values into
-        $rem_values: ();
-
-        @each $value in $px_values {
-
-            // If the value is zero, return 0
-            @if $value == 0 {
-                $rem_values: append($rem_values, $value);
-            }
-
-            // If the value is not zero, convert it from px to rem
-            @else {
-                $rem_values: append($rem_values, ($value / $baseline_rem) );
-            }
-        }
-
-        // Return the property and its list of converted values
-        #{$property}: $rem_values;
-    }
 }
 
 
@@ -96,40 +47,62 @@ $baseline_px: 16px;
     text-indent: -9999em;
     white-space: nowrap;
 }
-
-
 @mixin box-sizing($type) {
     -webkit-box-sizing: $type;
     -moz-box-sizing: $type;
     box-sizing: $type;
 }
-
 @mixin transition($type) {
     -webkit-transition: $type;
     -moz-transition: $type;
     transition: $type;
 }
-
 @mixin box-shadow($type) {
     -webkit-box-shadow: $type;
     -moz-box-shadow: $type;
     box-shadow: $type;
 }
-
 @mixin text-shadow($type) {
     -webkit-text-shadow: $type;
     -moz-text-shadow: $type;
     text-shadow: $type;
 }
-
 @mixin border-radius($type) {
     -webkit-border-radius: $type;
     -moz-border-radius: $type;
     border-radius: $type;
 }
-
 @mixin transform($type) {
     -webkit-transform: $type;
     -moz-transform: $type;
     transform: $type;
+}
+
+/* Breakpoints */
+@mixin breakpoint($point) {
+    @if $point == desktop {
+        @media (min-width:70em) {
+            @content;
+        }
+    }
+    @else if $point == laptop {
+        @media (min-width:64em) {
+            @content;
+        }
+    }
+    @else if $point == tablet {
+        @media (min-width:50em) {
+            @content;
+        }
+    }
+    @else if $point == phablet {
+        @media (min-width:37.5em) {
+            @content;
+        }
+    }
+    @else if $point == mobile {
+        @media (max-width:37.5em) {
+            @content;
+        }
+    }
 }

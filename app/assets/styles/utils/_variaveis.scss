@@ -2,13 +2,28 @@
    Variaveis
    ========================================================================== */
 
-$background: #16a085;
+
+// Colors
+$color-primary: #16a085;// light green
+$color-secondary: #333;// light green
+
+$background: $color-primary;
 $backgroundLight: #20ad91;
 $backgroundDark: #00453f;
 
-$link: #16a085;
-$linkHover: #20ad91;
+$color-link: $color-primary;
+$color-link-hover: #20ad91;
 
+
+// Texts
 $txtP: 1.4rem !default;
 $txtPBig: 1.8rem !default;
 $txtSecoes: 4.5rem !default;
+
+
+// Size
+$pad-mobile: 5%;
+$pad-tablet: 5%;
+$pad-desktop: 5%;
+
+

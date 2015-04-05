@@ -1,0 +1,39 @@
+#jobs {}
+.job-list {}
+.job-item {
+    margin: 1rem 0;
+    @include col(1);
+    @include breakpoint(phablet) {
+        @include col(1/2, 0, 2);
+    }
+    @include breakpoint(laptop) {
+        @include col(1/3, 0, 3, 2);
+    }
+    .goto {
+        display: none;
+    }
+}
+.job-image {
+    width: 100%;
+    height: auto;
+}
+.job-description {}
+.job-client {}
+.job-service,
+.job-technology {
+    margin: 5px 0;
+    font-size: 1rem;
+    &:before {
+        font-weight: bold;
+    }
+}
+.job-service {
+    &:before {
+        content: 'Serviço: ';
+    }
+}
+.job-technology {
+    &:before {
+        content: 'Tecnologia: ';
+    }
+}

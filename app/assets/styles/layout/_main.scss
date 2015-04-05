@@ -1,0 +1,76 @@
+.main {
+    background-image: url("../images/bg.jpg");
+    section {
+        margin: 2.5rem 0 2rem;
+        @include cf;
+        @include center($jeet-max-width, $pad-mobile);
+        h2 {
+            margin: .5rem 0 1.5rem;
+        }
+    }
+    .wrapper {
+        @include center($jeet-max-width, $pad-mobile);
+    }
+    h2 {
+        p {
+            padding: .5rem 0 1rem;
+        }
+        @include text-shadow(0px -1px 5px #ccc);
+    }
+}
+
+#social {
+    padding: 5px 0 25px;
+    text-align: center;
+    .social-item {
+        display: inline-block;
+        margin: 5px 10px;
+        // position: relative;
+        // overflow: hidden;
+        // @include border-radius(100px);
+    }
+    .social-link {
+        display: inline-block;
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-align: center;
+        text-decoration: none;
+        background: $background;
+        color: #fff;
+        padding: 0.7rem;
+        @include border-radius(100px);
+        &:hover, &:focus {
+            background: $backgroundDark;
+        }
+    }
+}
+
+.about {
+    position: absolute;
+    top: 0;
+    color: #fff;
+    padding: 75px 0 25px;
+    margin: 0 0 50px 0;
+    text-align: center;
+}
+
+.ico-text {
+    display: block;
+    position: relative;
+    top: 30px;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    font-size: 5rem;
+    line-height: 1.85em;
+    text-align: center;
+    background: $backgroundLight;
+    color: $backgroundDark;
+    @include border-radius(9999px);
+    @include box-shadow(0px 0px 15px 1px rgba(0, 0, 0, 0.75));
+}
+.box-cover {
+    background: $background;
+    border-top: 5px $background solid;
+}
+

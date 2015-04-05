@@ -1,20 +1,13 @@
 <header class="header box-content" role="banner">
 
-    <h1 class="title"><a href="/" title="Home">GS</a></h1>
+    <h1 class="title"><a href="/" title="Home">Gabriel Sepulveda</a></h1>
 
-    <!--<div class="trigger">
-        {% for page in site.pages %}
-          {% if page.title %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-          {% endif %}
-        {% endfor %}
-      </div>-->
 
     <nav id="nav" role="nav">
         <ul class="nav-list">
-            <li class="nav-item"><a href="/" class="nav-link">Blog</a></li>
-            <li class="nav-item"><a href="/projects" class="nav-link">Projetos</a></li>
-            <li class="nav-item"><a href="/about" class="nav-link">Sobre</a></li>
+            {% for page in site.pages %}{% if page.title %}
+            <li class="nav-item"><a href="{{ page.url | prepend: site.baseurl }}" class="nav-link">{{ page.title }}</a></li>
+            {% endif %}{% endfor %}
             <li class="nav-item"><a href="{{ " /feed.xml " | prepend: site.baseurl }}" class="nav-link">RSS</a></li>
         </ul>
     </nav>
