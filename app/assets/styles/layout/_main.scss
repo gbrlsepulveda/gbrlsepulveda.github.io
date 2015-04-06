@@ -1,5 +1,8 @@
 .main {
-    background-image: url("../images/bg.jpg");
+    background-color: #fdfdfd;
+    @include breakpoint(tablet) {
+        background-image: url("../images/bg.jpg");
+    }
     section {
         margin: 2.5rem 0 2rem;
         @include cf;

@@ -18,6 +18,7 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     '_site/assets/scripts/app.min.js': [
+                        'app/vendor/respondJs/dest/respond.min.js',
                         'app/assets/scripts/plugins.js',
                         'app/assets/scripts/main.js'
                     ]
@@ -34,7 +35,8 @@ module.exports = function(grunt) {
         concat: {
             dist: {
                 files: {
-                    '_siteassets/scripts/app.min.js': [
+                    '_site/assets/scripts/app.min.js': [
+                        'app/vendor/respondJs/dest/respond.min.js',
                         'app/assets/scripts/plugins.js',
                         'app/assets/scripts/main.js'
                     ]
@@ -131,8 +133,9 @@ module.exports = function(grunt) {
         connect: {
             server: {
                 options: {
+                    open: true,
                     port: 8001,
-                    hostname: '*',
+                    hostname: '0.0.0.0',
                     base: '_site',
                     livereload: true
                 }
@@ -153,7 +156,7 @@ module.exports = function(grunt) {
             },
             js: {
                 files: 'app/assets/scripts/**/*',
-                tasks: ['newer:concat:dist']
+                tasks: ['concat:dist']
             },
             jekyll: {
                 files: [
