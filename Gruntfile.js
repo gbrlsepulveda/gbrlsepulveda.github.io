@@ -18,9 +18,9 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     '_site/assets/scripts/app.min.js': [
-                        'app/vendor/respondJs/dest/respond.min.js',
-                        'app/assets/scripts/plugins.js',
-                        'app/assets/scripts/main.js'
+                        'src/vendor/respondJs/dest/respond.min.js',
+                        'src/assets/scripts/plugins.js',
+                        'src/assets/scripts/main.js'
                     ]
                 }
             }
@@ -36,9 +36,9 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     '_site/assets/scripts/app.min.js': [
-                        'app/vendor/respondJs/dest/respond.min.js',
-                        'app/assets/scripts/plugins.js',
-                        'app/assets/scripts/main.js'
+                        'src/vendor/respondJs/dest/respond.min.js',
+                        'src/assets/scripts/plugins.js',
+                        'src/assets/scripts/main.js'
                     ]
                 }
             },
@@ -48,7 +48,7 @@ module.exports = function(grunt) {
             dist: {
                 files: [{
                     expand: true,
-                    cwd: 'app/assets/',
+                    cwd: 'src/assets/',
                     src: [
                         'fonts/**/*',
                         'images/**/*',
@@ -67,7 +67,7 @@ module.exports = function(grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd: 'app/',
+                    cwd: 'src/',
                     src: '*.html',
                     dest: '_site',
                 }],
@@ -103,17 +103,17 @@ module.exports = function(grunt) {
             options: {
                 jshintrc: '.jshintrc'
             },
-            all: ['app/assets/scripts/*.js']
+            all: ['src/assets/scripts/*.js']
         },
 
         jekyll: {
             options: {
-                config: 'app/src/_config.yml',
-                layouts: 'app/src/_layouts/'
+                config: 'src/jekyll/_config.yml',
+                layouts: 'src/jekyll/_layouts/'
             },
             dist: {
                 options: {
-                    src: 'app/src/',
+                    src: 'src/jekyll/',
                     dest: '_site/'
                 }
             }
@@ -125,7 +125,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    '_site/assets/styles/screen.css': 'app/assets/styles/screen.scss'
+                    '_site/assets/styles/screen.css': 'src/assets/styles/screen.scss'
                 }
             }
         },
@@ -149,23 +149,23 @@ module.exports = function(grunt) {
             },
             copy: {
                 files: [
-                    'app/assets/fonts/**/*',
-                    'app/assets/images/**/*'
+                    'src/assets/fonts/**/*',
+                    'src/assets/images/**/*'
                 ],
                 tasks: ['newer:copy']
             },
             js: {
-                files: 'app/assets/scripts/**/*',
+                files: 'src/assets/scripts/**/*',
                 tasks: ['concat:dist']
             },
             jekyll: {
                 files: [
-                    'app/src/**/*'
+                    'src/jekyll/**/*'
                 ],
                 tasks: ['build']
             },
             sass: {
-                files: ['app/assets/styles/**/*'],
+                files: ['src/assets/styles/**/*'],
                 tasks: ['sass']
             },
             grunt: {

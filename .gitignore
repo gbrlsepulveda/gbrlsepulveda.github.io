@@ -3,4 +3,4 @@
 .sass-cache
 node_modules
 _site
-app/vendor/
+src/vendor/
