@@ -11,9 +11,13 @@ body {
     font: 62.5%/1.3rem 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 300;
     text-align: left;
-    background: #eee;
     background-size: 100% auto;
     overflow-y: scroll;
+    background-color: #eee;
+    background-color: #fdfdfd;
+    @include breakpoint(tablet) {
+        // background-image: url("../images/bg.jpg");
+    }
  }
 
 /* ==========================================================================

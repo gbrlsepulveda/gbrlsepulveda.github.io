@@ -6,3 +6,11 @@ categories: general
 ---
 
 Fala rapeize!
+
+{% highlight ruby %}
+if (window.pageYOffset > 150) {
+    app.html.classList.add('is-menufloated');
+} else {
+    app.html.classList.remove('is-menufloated');
+}
+{% endhighlight %}

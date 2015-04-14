@@ -1,8 +1,4 @@
 .main {
-    background-color: #fdfdfd;
-    @include breakpoint(tablet) {
-        background-image: url("../images/bg.jpg");
-    }
     section {
         margin: 2.5rem 0 2rem;
         @include cf;
@@ -57,13 +53,12 @@
     text-align: center;
 }
 
-.ico-text {
+.skill-icon {
     display: block;
     position: relative;
-    top: 30px;
     width: 150px;
     height: 150px;
-    margin: 0 auto;
+    margin: 0 0 25px;
     font-size: 5rem;
     line-height: 1.85em;
     text-align: center;
