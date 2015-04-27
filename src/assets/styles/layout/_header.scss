@@ -1,10 +1,10 @@
 .header {
-    @include center(100%, $pad-mobile);
     @include cf;
-    @include box-shadow(0px 3px 5px rgba(0, 0, 0, 0.5));
+    @include card-shadow;
     color: #fff;
     z-index: 10;
     background: $color-primary;
+    overflow: hidden;
     .title {
         a { text-decoration: none; }
         @include breakpoint (tablet) {
@@ -16,6 +16,7 @@
     }
     .h-tip {
         display: inline-block;
+        float: right;
         width: 50px;
         height: 50px;
         background: $color-primary;

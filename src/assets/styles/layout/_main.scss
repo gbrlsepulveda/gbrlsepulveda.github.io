@@ -1,14 +1,22 @@
+.wrapper {
+    @include center($jeet-max-width, $pad-mobile);
+    @include breakpoint (phablet) {
+        @include center($jeet-max-width, $pad-phablet);
+    }
+    @include breakpoint (tablet) {
+        @include center($jeet-max-width, $pad-tablet);
+    }
+    @include breakpoint (desktop) {
+        @include center(1330px, $pad-desktop);
+    }
+}
 .main {
     section {
         margin: 2.5rem 0 2rem;
         @include cf;
-        @include center($jeet-max-width, $pad-mobile);
         h2 {
             margin: .5rem 0 1.5rem;
         }
-    }
-    .wrapper {
-        @include center($jeet-max-width, $pad-mobile);
     }
     h2 {
         p {

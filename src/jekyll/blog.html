@@ -4,24 +4,26 @@ title: Blog
 permalink: /blog/
 ---
 
-<section class="post-page wrapper">
+<div class="wrapper">
+    <section class="post-page">
 
-    {% for post in site.posts %}
-    <article>
+        {% for post in site.posts %}
+        <article>
 
-        <header>
-            <h2>
-                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" data-disqus-identifier="{{ post.title }}">{{ post.title }}</a>
-            </h2>
-            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-            <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread" data-disqus-identifier="{{ post.title }}">Comentários</a>
-        </header>
+            <header>
+                <h2>
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" data-disqus-identifier="{{ post.title }}">{{ post.title }}</a>
+                </h2>
+                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread" data-disqus-identifier="{{ post.title }}">Comentários</a>
+            </header>
 
-        <span class="disqus-comment-count" data-disqus-identifier="article_1_identifier">First article</span>
-        <span class="disqus-comment-count" data-disqus-url="{{ post.url | prepend: site.baseurl }}">First article</span>
+            <span class="disqus-comment-count" data-disqus-identifier="article_1_identifier">First article</span>
+            <span class="disqus-comment-count" data-disqus-url="{{ post.url | prepend: site.baseurl }}">First article</span>
 
-        <p>{{post.excerpt}}</p>
-    </article>
-    {% endfor %}
+            <p>{{post.excerpt}}</p>
+        </article>
+        {% endfor %}
 
-</section>
+    </section>
+</div>

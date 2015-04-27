@@ -2,7 +2,10 @@
 .job-list {}
 .job-item {
     margin: 1rem 0;
+    background: #fff;
+    border-radius: 5px;
     @include col(1);
+    // @include card-shadow;
     @include breakpoint(phablet) {
         @include col(1/2, 0, 2);
     }
@@ -16,19 +19,23 @@
 .job-image {
     width: 100%;
     height: auto;
-    margin-bottom: 0.7rem;
-    border: 1px #ddd solid;
-    @include border-radius(3px);
-    @include box-shadow(2px -1px 15px 1px rgba(0,0,0,.25));
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
-.job-description {}
-.job-client {}
+.job-description {
+    padding: 20px 20px 40px;
+}
+.job-client {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
 .job-service,
 .job-technology {
+    color: #999;
     margin: 5px 0;
-    font-size: 1rem;
+    font-size: 0.9rem;
     &:before {
-        font-weight: bold;
+        color: #333;
     }
 }
 .job-service {

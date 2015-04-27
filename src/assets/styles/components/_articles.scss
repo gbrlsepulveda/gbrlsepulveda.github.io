@@ -3,8 +3,9 @@
 .article-list {
 }
 .article-item {
-    padding: 1em;
+    padding: 20px 20px 40px;
     background: rgba(0, 0, 0, .1);
+    border-radius: 5px;
     @include col(1);
 
     @include breakpoint(phablet) {

@@ -13,8 +13,8 @@ body {
     text-align: left;
     background-size: 100% auto;
     overflow-y: scroll;
-    background-color: #eee;
     background-color: #fdfdfd;
+    background-color: $light-gray;
     @include breakpoint(tablet) {
         // background-image: url("../images/bg.jpg");
     }

@@ -1,8 +1,9 @@
 #skills {
+    background: #fff;
+    // border-radius: 5px;
     @include center(100%, 0);
-    @include breakpoint(phablet) {
-        @include box-shadow(0 0px 35px 1px rgba(0,0,0,0.3));
-    }
+    @include card-shadow;
+    // @include breakpoint(phablet) {}
 }
 .skill-item {
     @include col(1);

@@ -28,6 +28,7 @@
     "grunt-newer": "^0.7.0",
     "grunt-sass": "^0.18.1",
     "matchdep": "~0.1.2",
-    "time-grunt": "^1.0.0"
+    "node-sass": "^2.1.1",
+    "time-grunt": "^1.1.1"
   }
 }
