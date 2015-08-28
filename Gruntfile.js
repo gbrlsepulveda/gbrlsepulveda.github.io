@@ -18,7 +18,6 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     '_site/assets/scripts/app.min.js': [
-                        'src/vendor/respondJs/dest/respond.min.js',
                         'src/assets/scripts/plugins.js',
                         'src/assets/scripts/main.js'
                     ]
@@ -36,7 +35,6 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     '_site/assets/scripts/app.min.js': [
-                        'src/vendor/respondJs/dest/respond.min.js',
                         'src/assets/scripts/plugins.js',
                         'src/assets/scripts/main.js'
                     ]
@@ -121,7 +119,8 @@ module.exports = function(grunt) {
 
         sass: {
             options: {
-                sourceMap: true
+                sourceMap: true,
+                outputStyle: 'compressed'
             },
             dist: {
                 files: {
