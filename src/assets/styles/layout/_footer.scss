@@ -2,9 +2,9 @@
     position: relative;
     @include center(100%, $pad-mobile);
     color: #fff;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    background: #333 url("../images/background-js.jpg") top left;
+    padding-top: 2em;
+    padding-bottom: 1em;
+    // background: #333 url("../images/background-js.jpg") top left;
     background-attachment: fixed;
     text-align: center;
     word-wrap: break-all;
@@ -12,10 +12,8 @@
     h5,
     small {
         position: relative;
+        color: #333;
         z-index: 1;
-    }
-    h2 {
-        color: #fff;
     }
     &:before {
         content: '';

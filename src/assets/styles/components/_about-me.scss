@@ -2,9 +2,9 @@
     position: relative;
     @include center(100%, 0);
     margin: 0;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    background: #ccc url("../images/background-js.jpg") top left repeat;
+    padding-top: 7%;
+    padding-bottom: 7%;
+    background: #ccc url("background-js.jpg") top left repeat;
     background-attachment: fixed;
     p {
         position: relative;
@@ -15,13 +15,13 @@
         @include breakpoint(tablet) {
             font-size: 1.5rem;
             &.bigger {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
         }
         @include breakpoint(laptop) {
-            font-size: 2.5rem;
+            font-size: 1.6rem;
             &.bigger {
-                font-size: 4rem;
+                font-size: 2.5rem;
             }
         }
     }

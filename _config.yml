@@ -1,0 +1,28 @@
+# Site settings
+title: Gabriel Sepulveda - Front-End Developer
+email: gabrielsepulveda07@gmail.com
+description: > # Gabriel Sepulveda, Desenvolvedor Front-End, trabalha com desenvolvimento web desde 2009 e atualmente trabalha na Ideais.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://www.gabrielsepulveda.com.br" # the base hostname & protocol for your site
+paginate:  5
+permalink: /blog/:title/
+twitter_username: gbrlsepulveda
+github_username:  gbrlsepulveda
+excerpt_separator: someNonsenseString
+
+# Build settings
+markdown: kramdown
+members:
+  - name: Gabriel Sepulveda
+    url: https://twitter.com/gbrlsepulveda
+    image: http://www.gravatar.com/avatar/55d4c7ed4ece228eeaa09475fb3bfeae.png
+
+exclude: [
+  "node_modules/",
+  ".editorconfig",
+  "Gruntfile.js",
+  "README.md",
+  "CNAME",
+  "package.json",
+  "src"
+]

@@ -6,7 +6,9 @@
 
     @import "utils/_variaveis.scss";
     @import "utils/_mixins.scss";
-    @import 'utils/jeet/index';
+    @import 'utils/jeet/index.scss';
+    @import 'vendor/pure/all.scss';
+
 
 /* ==========================================================================
    Base

@@ -4,3 +4,5 @@
 node_modules
 _site
 src/vendor/
+
+npm-debug.log

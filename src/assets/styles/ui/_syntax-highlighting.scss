@@ -9,7 +9,7 @@
     font-size: 16px;
     line-height: 1.6em;
     color: #fff;
-    background: #272822;
+    background: #222;
     overflow: scroll;
     @include breakpoint(phablet) {
         margin: 1em (-1 * $pad-phablet);

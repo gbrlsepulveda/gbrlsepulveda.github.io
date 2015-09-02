@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<section id="quem-sou">
+  <div class="wrapper">
+
+    <p class="bigger">Hello, my name is Gabriel Sepulveda. I'm Front End Engineer, who works for <a href="http://www.b2wdigital.com/" target="_blank">B2W</a>, taking care of the largest e-commerces in Latin America.</p>
+    <p>I'm started programming in 2010, I'm Bachelor of Information Systems by the Estacio de Sá.</p>
+    <p>Find me here.</p>
+
+    <ul id="social">
+      <li class="social-item">
+        <a title="Twitter" href="http://twitter.com/gbrlsepulveda" class="social-link" target="_blank"><span class="icon-twitter"></span></a>
+      </li>
+      <li class="social-item">
+        <a title="LinkedIn" href="http://br.linkedin.com/pub/gabriel-sepulveda/36/7b6/61b" class="social-link" target="_blank"><span class="icon-linkedin"></span></a>
+      </li>
+      <li class="social-item">
+        <a title="Github" href="http://github.com/gbrlsepulveda" class="social-link" target="_blank"><span class="icon-github2"></span></a>
+      </li>
+      <li class="social-item">
+        <a title="E-mail: gabrielsepulveda07@gmail.com" href="mailto:gabrielsepulveda07@gmail.com" class="social-link"><span class="icon-mail"></span></a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="articles">
+  <div class="wrapper">
+
+    <h2>Blog</h2>
+
+    {% for post in site.posts %}
+    <article class="article-item">
+      <h3>
+        <a class="article-link" href="{{ post.url | prepend: site.baseurl }}" data-disqus-identifier="{{ post.title }}">
+          {{ post.title }}
+        </a>
+      </h3>
+      <div class="article-meta">{{ post.date | date: "%b %-d, %Y" }}</div>
+    </article>
+    {% endfor %}
+  </div>
+</section>

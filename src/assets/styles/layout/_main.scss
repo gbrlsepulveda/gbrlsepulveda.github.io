@@ -26,31 +26,6 @@
     }
 }
 
-#social {
-    padding: 5px 0 25px;
-    text-align: center;
-    .social-item {
-        display: inline-block;
-        margin: 5px 10px;
-        // position: relative;
-        // overflow: hidden;
-        // @include border-radius(100px);
-    }
-    .social-link {
-        display: inline-block;
-        font-size: 2.5rem;
-        font-weight: 700;
-        text-align: center;
-        text-decoration: none;
-        background: $background;
-        color: #fff;
-        padding: 0.7rem;
-        @include border-radius(100px);
-        &:hover, &:focus {
-            background: $backgroundDark;
-        }
-    }
-}
 
 .about {
     position: absolute;
