@@ -1,0 +1,36 @@
+*,
+*:before,
+*:after {
+    @include box-sizing(border-box);
+}//FTW
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font: 62.5%/1.3rem 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    text-align: left;
+    background-size: 100% auto;
+    overflow-y: scroll;
+    background-color: #fafafa;
+    @include breakpoint(laptop) {
+        background-color: $light-gray;
+    }
+ }
+
+/* ==========================================================================
+   Geral
+   ========================================================================== */
+
+a, button, li {
+    @include transition( all $transition-out ease-out);
+    &:hover, &:focus {
+        @include transition( all $transition-in ease-in);
+    }
+}
+
+::selection {
+    color: #fff;
+    background: $background;
+}

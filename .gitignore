@@ -3,6 +3,6 @@
 .sass-cache
 node_modules
 _site
-src/vendor/
+src/assets
 
 npm-debug.log

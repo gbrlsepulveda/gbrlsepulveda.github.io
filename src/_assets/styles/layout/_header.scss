@@ -1,0 +1,141 @@
+.header {
+    @include card-shadow;
+    color: #fff;
+    z-index: 10;
+    background: $color-primary;
+    overflow: hidden;
+    @include transform(translate3d(0,0,0));
+    .title {
+        a {
+            text-decoration: none;
+            &:hover,
+            &:focus,
+            &:active {
+                color: #fff;
+                text-decoration: underline;
+            }
+        }
+        @include breakpoint (tablet) {
+            @include col(1/3);
+        }
+        @include breakpoint (laptop) {
+            @include col(1/2);
+        }
+    }
+    .h-tip {
+        display: inline-block;
+        float: right;
+        width: 50px;
+        height: 50px;
+        background: $color-primary;
+        border: 1px #fff solid;
+        cursor: pointer;
+        @include transition(all $transition-in ease);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+    .is-menufloated & .h-tip {
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+    @include breakpoint(tablet) {
+        .h-tip { display: none; }
+    }
+    @include breakpoint(laptop) {
+        height: 100px;
+    }
+}
+
+#nav {
+    // background: #777;
+    height: 0px;
+    overflow: hidden;
+    margin-top: 15px;
+    @include transition(height $transition-out ease);
+    @include cf;
+    @include breakpoint (tablet) {
+        width: auto;
+        height: auto;
+        margin-top: 0;
+        margin-right: 0 !important;
+        @include col(2/3);
+    }
+    @include breakpoint(laptop) {
+        @include col(1/2);
+        margin-top: 23px;
+        text-align: right;
+        word-spacing: 0;
+    }
+    &.is-active {
+        height: 205px;
+    }
+    .nav-list {
+        word-spacing: -0.26em;
+    }
+    .nav-item {
+        display: block;
+        border-top: 1px $background solid;
+        @include breakpoint(laptop) {
+            display: inline-block;
+            word-spacing: 0;
+        }
+    }
+    .nav-link {
+        display: block;
+        text-decoration: none;
+        font-size: $txtP;
+        padding: 15px;
+        color: #fff;
+        background: $backgroundLight;
+        @include border-radius($border-radius);
+        @include breakpoint(laptop) {
+            background: rgba(0, 0, 0, 0.05);
+            padding: 15px 20px;
+        }
+        &:hover, &:focus {
+            color: $color-primary;
+            background: rgba(0, 50, 60, 0.5);
+        }
+    }
+    .ico-nav {
+        position: relative;
+        float: right;
+        width: 50px;
+        height: 30px;
+        right: 25px;
+        top: 10px;
+        //background: #ccc;
+        display: block;
+        cursor: pointer;
+    }
+}
+
+#social {
+    position: relative;
+    padding: 5px 0 25px;
+    text-align: center;
+    z-index: 1;
+}
+.social-item {
+    display: inline-block;
+    margin: 5px 10px;
+}
+.social-link {
+    display: inline-block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    background: $background;
+    color: #fff;
+    padding: 0.7rem;
+    cursor: pointer;
+    text-decoration: none;
+    @include border-radius(100px);
+    &:hover, &:focus {
+        background: $backgroundDark;
+        color: $background;
+        text-decoration: none;
+    }
+}

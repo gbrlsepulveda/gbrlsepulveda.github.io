@@ -1,0 +1,113 @@
+@mixin placeholder($color) {
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+    &:-moz-placeholder {
+        color: $color;
+    }
+
+    /* Firefox 18- */
+    &::-moz-placeholder {
+        color: $color;
+    }
+
+    /* Firefox 19+ */
+    &:-ms-input-placeholder {
+        color: $color;
+    }
+    &::placeholder {
+        color: $color;
+    }
+}
+@mixin keyframes($name) {
+    @-webkit-keyframes $name {
+        @content;
+    }
+    @-moz-keyframes $name {
+        @content;
+    }
+    @-ms-keyframes $name {
+        @content;
+    }
+    @keyframes $name {
+        @content;
+    }
+}
+@mixin paint($background-color:#000, $text-color:#fff) {
+    background-color: $background-color;
+    color: $text-color;
+}
+
+
+
+/* Image replacement */
+@mixin image-replacement {
+    display: block;
+    overflow: hidden;
+    text-indent: -9999em;
+    white-space: nowrap;
+}
+@mixin box-sizing($type) {
+    -webkit-box-sizing: $type;
+    -moz-box-sizing: $type;
+    box-sizing: $type;
+}
+@mixin transition($type) {
+    -webkit-transition: $type;
+    -moz-transition: $type;
+    transition: $type;
+}
+@mixin box-shadow($type) {
+    -webkit-box-shadow: $type;
+    -moz-box-shadow: $type;
+    box-shadow: $type;
+}
+@mixin text-shadow($type) {
+    -webkit-text-shadow: $type;
+    -moz-text-shadow: $type;
+    text-shadow: $type;
+}
+@mixin border-radius($type) {
+    -webkit-border-radius: $type;
+    -moz-border-radius: $type;
+    border-radius: $type;
+}
+@mixin transform($type) {
+    -webkit-transform: $type;
+    -moz-transform: $type;
+    transform: $type;
+}
+
+/* Breakpoints */
+@mixin breakpoint($point) {
+    @if $point == desktop {
+        @media (min-width:70em) {
+            @content;
+        }
+    }
+    @else if $point == laptop {
+        @media (min-width:64em) {
+            @content;
+        }
+    }
+    @else if $point == tablet {
+        @media (min-width:50em) {
+            @content;
+        }
+    }
+    @else if $point == phablet {
+        @media (min-width:37.5em) {
+            @content;
+        }
+    }
+    @else if $point == mobile {
+        @media (max-width:37.5em) {
+            @content;
+        }
+    }
+}
+
+
+@mixin card-shadow {
+    @include box-shadow(0 1px 5px 0px rgba(0,0,0,0.3));
+}

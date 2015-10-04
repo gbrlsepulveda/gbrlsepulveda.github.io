@@ -1,0 +1,43 @@
+/* ==========================================================================
+   Variaveis
+   ========================================================================== */
+
+
+// Colors
+$light-green: #20ad91;
+$main-green: #16a085;
+$dark-green: #00453f;
+
+$light-gray: #EBEBEB;
+$gray: #666;
+
+$color-primary: $main-green;
+$color-secondary: $gray;
+$color-texts: $gray;
+
+$background: $color-primary;
+$backgroundLight: $light-green;
+$backgroundDark: $dark-green;
+
+$color-link: $color-primary;
+$color-link-hover: $light-green;
+
+
+// Texts
+$txtP: 1.4rem !default;
+$txtPBig: 1.8rem !default;
+$txtSecoes: 4.5rem !default;
+
+
+// Size
+$pad-mobile: 15px;
+$pad-phablet: 25px;
+$pad-tablet: 40px;
+$pad-desktop: 5%;
+
+// Transition time
+$transition-in: 250ms;
+$transition-out: 350ms;
+
+// Effects
+$border-radius: 3px;

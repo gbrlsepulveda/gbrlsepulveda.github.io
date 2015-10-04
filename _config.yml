@@ -10,6 +10,14 @@ twitter_username: gbrlsepulveda
 github_username:  gbrlsepulveda
 excerpt_separator: someNonsenseString
 
+# Where things are
+destination:  ./_site
+source:  ./src/
+# data_dir:     ./src/_data
+layouts_dir:  ./src/_layouts
+includes_dir: ./src/_includes
+plugins_dir:  ./src/_plugins
+
 # Build settings
 markdown: kramdown
 members:

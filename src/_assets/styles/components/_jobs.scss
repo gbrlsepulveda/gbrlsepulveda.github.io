@@ -1,0 +1,53 @@
+#jobs {
+}
+.job-list {}
+.job-item {
+    margin: 1rem 0;
+    background: #fff;
+    @include box-shadow(1px 1px 5px rgba(0,0,0,0.15));
+    @include border-radius($border-radius);
+    @include col(1);
+    // @include card-shadow;
+    @include breakpoint(phablet) {
+        @include col(1/2, 0, 2);
+    }
+    @include breakpoint(laptop) {
+        @include col(1/3, 0, 3, 2);
+        @include box-shadow(none);
+    }
+    .goto {
+        display: none;
+    }
+}
+.job-image {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.job-description {
+    padding: 20px 20px 40px;
+}
+.job-client {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+.job-service,
+.job-technology {
+    color: #999;
+    margin: 5px 0;
+    font-size: 0.9rem;
+    &:before {
+        color: #333;
+    }
+}
+.job-service {
+    &:before {
+        content: 'Serviço: ';
+    }
+}
+.job-technology {
+    &:before {
+        content: 'Tecnologia: ';
+    }
+}

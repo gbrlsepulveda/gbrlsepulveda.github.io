@@ -1,4 +1,4 @@
-<header class="header" role="banner">
+<header class="header pure-g" role="banner">
   <div class="wrapper">
 
     <h1 class="title">
@@ -6,7 +6,7 @@
       <div class="h-tip"></div>
     </h1>
 
-    <nav id="nav" role="nav">
+    <nav id="nav" class="pure-u-1" role="nav">
       <ul class="nav-list">
         {% for page in site.pages %}{% if page.title %}
         <li class="nav-item"><a href="{{ page.url | prepend: site.baseurl }}" class="nav-link">{{ page.title }}</a></li>

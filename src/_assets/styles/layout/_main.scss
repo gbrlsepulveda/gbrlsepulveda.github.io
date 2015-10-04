@@ -1,0 +1,57 @@
+.wrapper {
+    @include center($jeet-max-width, $pad-mobile);
+    @include breakpoint (phablet) {
+        @include center($jeet-max-width, $pad-phablet);
+    }
+    @include breakpoint (tablet) {
+        @include center($jeet-max-width, $pad-tablet);
+    }
+    @include breakpoint (desktop) {
+        @include center(1330px, $pad-desktop);
+    }
+}
+.main {
+    section {
+        margin: 2.5rem 0 2rem;
+        @include cf;
+        h2 {
+            margin: .5rem 0 1.5rem;
+        }
+    }
+    h2 {
+        p {
+            padding: .5rem 0 1rem;
+        }
+        @include text-shadow(0px -1px 5px #ccc);
+    }
+}
+
+
+.about {
+    position: absolute;
+    top: 0;
+    color: #fff;
+    padding: 75px 0 25px;
+    margin: 0 0 50px 0;
+    text-align: center;
+}
+
+.skill-icon {
+    display: block;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 0 25px;
+    font-size: 5rem;
+    line-height: 1.85em;
+    text-align: center;
+    background: $backgroundLight;
+    color: $backgroundDark;
+    @include border-radius(150px);
+    @include box-shadow(0px 0px 15px 1px rgba(0, 0, 0, 0.75));
+}
+.box-cover {
+    background: $background;
+    border-top: 5px $background solid;
+}
+

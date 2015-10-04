@@ -1,0 +1,14 @@
+#skills {
+    @include center(100%, 0);
+    @include card-shadow;
+    // @include breakpoint(phablet) {}
+}
+.skill-item {
+    @include col(1);
+    @include breakpoint(phablet) {
+        @include col(1/2, 0, 2);
+    }
+    @include breakpoint(laptop) {
+        @include col(1/3, 0, 3, 2);
+    }
+}
