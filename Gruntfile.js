@@ -1,14 +1,26 @@
-"use strict";
+'use strict';
 
 module.exports = function(grunt) {
 
   // Load all tasks
-  require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
+  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
   require('time-grunt')(grunt);
 
   grunt.initConfig({
 
-    // Concat and minify javascripts
+    clean: ['src/assets/'],
+
+    copy: {
+      main: {
+        expand: true,
+        cwd: 'src/_assets/fonts/',
+        src: '**',
+        dest: 'src/assets/',
+        flatten: true,
+        filter: 'isFile',
+      }
+    },
+
     uglify: {
       options: {
         compress: {
@@ -17,9 +29,9 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'assets/app.min.js': [
-            'src/assets/scripts/plugins.js',
-            'src/assets/scripts/main.js'
+          'src/assets/app.min.js': [
+            'src/_assets/scripts/plugins.js',
+            'src/_assets/scripts/main.js'
           ]
         }
       }
@@ -28,9 +40,9 @@ module.exports = function(grunt) {
     concat: {
       dist: {
         files: {
-          'assets/app.min.js': [
-            'src/assets/scripts/plugins.js',
-            'src/assets/scripts/main.js'
+          'src/assets/app.min.js': [
+            'src/_assets/scripts/plugins.js',
+            'src/_assets/scripts/main.js'
           ]
         }
       },
@@ -43,9 +55,9 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: 'src/assets/images',
+          cwd: 'src/_assets/images',
           src: ['**/*.{png,jpg,gif}'],
-          dest: 'assets/'
+          dest: 'src/assets/'
         }],
       }
     },
@@ -54,7 +66,7 @@ module.exports = function(grunt) {
       options: {
         jshintrc: '.jshintrc'
       },
-      all: ['src/assets/scripts/*.js']
+      all: ['src/_assets/scripts/*.js']
     },
 
     sass: {
@@ -63,7 +75,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'assets/screen.css': 'src/assets/styles/screen.scss'
+          'src/assets/screen.css': 'src/_assets/styles/screen.scss'
         }
       }
     },
@@ -71,16 +83,16 @@ module.exports = function(grunt) {
     watch: {
       imagemin: {
         files: [
-          'src/assets/images/**/*'
+          'src/_assets/images/**/*'
         ],
         tasks: ['imagemin']
       },
       js: {
-        files: 'src/assets/scripts/**/*',
+        files: 'src/_assets/scripts/**/*.js',
         tasks: ['concat:dist']
       },
       sass: {
-        files: ['src/assets/styles/**/*'],
+        files: ['src/_assets/styles/**/*.scss'],
         tasks: ['sass']
       },
       grunt: {
@@ -97,6 +109,8 @@ module.exports = function(grunt) {
   grunt.registerTask('lint', ['jshint:all']);
 
   grunt.registerTask('build', [
+    'clean',
+    'copy',
     'sass',
     'uglify:dist',
     'imagemin:dist'
