@@ -8,12 +8,13 @@
             html: document.body.parentNode,
             logo: document.querySelector('h1.title a'),
             nav: document.querySelector('#nav'),
-            navTip: document.querySelector('.header .h-tip')
+            navButton: document.querySelector('.header .nav-button')
         };
 
         app.bindEvents = function() {
-            app.navTip.addEventListener('click', function(event) {
+            app.navButton.addEventListener('click', function(event) {
                 event.preventDefault();
+                this.classList.toggle('is-active');
 
                 if (window.pageYOffset > 150) {
                     app.nav.classList.add('is-active');

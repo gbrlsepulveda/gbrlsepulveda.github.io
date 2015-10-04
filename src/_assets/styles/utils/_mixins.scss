@@ -19,6 +19,7 @@
         color: $color;
     }
 }
+
 @mixin keyframes($name) {
     @-webkit-keyframes $name {
         @content;
@@ -33,12 +34,11 @@
         @content;
     }
 }
+
 @mixin paint($background-color:#000, $text-color:#fff) {
     background-color: $background-color;
     color: $text-color;
 }
-
-
 
 /* Image replacement */
 @mixin image-replacement {
@@ -106,7 +106,6 @@
         }
     }
 }
-
 
 @mixin card-shadow {
     @include box-shadow(0 1px 5px 0px rgba(0,0,0,0.3));

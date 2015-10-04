@@ -22,31 +22,19 @@
             @include col(1/2);
         }
     }
-    .h-tip {
-        display: inline-block;
-        float: right;
-        width: 50px;
-        height: 50px;
-        background: $color-primary;
-        border: 1px #fff solid;
-        cursor: pointer;
-        @include transition(all $transition-in ease);
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-    }
-    .is-menufloated & .h-tip {
+    .is-menufloated & .nav-button {
         position: fixed;
         top: 0;
         right: 0;
     }
     @include breakpoint(tablet) {
-        .h-tip { display: none; }
+        .nav-button { display: none; }
     }
     @include breakpoint(laptop) {
         height: 100px;
     }
 }
+
 
 #nav {
     // background: #777;
@@ -109,6 +97,87 @@
         //background: #ccc;
         display: block;
         cursor: pointer;
+    }
+}
+$menu-size: 44px;
+.nav-button {
+    display: inline-block;
+    float: right;
+    width: $menu-size;
+    height: $menu-size;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    outline: none;
+    @include transition(all $transition-in);
+    &:hover {
+        opacity: 1;
+
+        .lines {
+            &:before {
+                top: 1.14286rem;
+            }
+            &:after {
+                top: -1.14286rem;
+            }
+        }
+    }
+    &:active {
+        transition: 0;
+    }
+    .lines {
+        display: inline-block;
+        width: $menu-size;
+        height: 7px;
+        background: #fff;
+        @include border-radius($border-radius);
+        @include transition(all $transition-out);
+        position: relative;
+        vertical-align: super;
+        &:before, &:after {
+            display: inline-block;
+            width: $menu-size;
+            height: 7px;
+            background: #fff;
+            @include border-radius($border-radius);
+            @include transition(all $transition-in);
+            position: absolute;
+            left: 0;
+            content: '';
+            -webkit-transform-origin: 0.28571rem center;
+            transform-origin: 0.28571rem center;
+        }
+        &:before {
+            top: 1rem;
+        }
+        &:after {
+            top: -1rem;
+        }
+    }
+    &.is-active {
+        .lines {
+            background: transparent;
+
+            &:before,
+            &:after {
+                -webkit-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+                top: 0;
+                width: $menu-size;
+            }
+            &:before {
+                -webkit-transform: rotate3d(0, 0, 1, 45deg);
+                transform: rotate3d(0, 0, 1, 45deg);
+            }
+            &:after {
+                -webkit-transform: rotate3d(0, 0, 1, -45deg);
+                transform: rotate3d(0, 0, 1, -45deg);
+            }
+        }
     }
 }
 
