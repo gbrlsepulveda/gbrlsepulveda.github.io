@@ -56,7 +56,7 @@
         text-align: right;
         word-spacing: 0;
     }
-    &.is-active {
+    .navbar-opened & {
         height: 205px;
     }
     .nav-list {
@@ -158,7 +158,7 @@ $menu-size: 44px;
             top: -1rem;
         }
     }
-    &.is-active {
+    .navbar-opened & {
         .lines {
             background: transparent;
 
