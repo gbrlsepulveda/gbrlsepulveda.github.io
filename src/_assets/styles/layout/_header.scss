@@ -119,10 +119,10 @@ $menu-size: 44px;
 
         .lines {
             &:before {
-                top: 1.14286rem;
+                top: 1rem;
             }
             &:after {
-                top: -1.14286rem;
+                top: -1rem;
             }
         }
     }
@@ -132,7 +132,7 @@ $menu-size: 44px;
     .lines {
         display: inline-block;
         width: $menu-size;
-        height: 7px;
+        height: 5px;
         background: #fff;
         @include border-radius($border-radius);
         @include transition(all $transition-out);
@@ -141,7 +141,7 @@ $menu-size: 44px;
         &:before, &:after {
             display: inline-block;
             width: $menu-size;
-            height: 7px;
+            height: 5px;
             background: #fff;
             @include border-radius($border-radius);
             @include transition(all $transition-in);
@@ -152,10 +152,10 @@ $menu-size: 44px;
             transform-origin: 0.28571rem center;
         }
         &:before {
-            top: 1rem;
+            top: .75rem;
         }
         &:after {
-            top: -1rem;
+            top: -.75rem;
         }
     }
     .navbar-opened & {
