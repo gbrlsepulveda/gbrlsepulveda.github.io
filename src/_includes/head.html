@@ -1,7 +1,7 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>
     {% if page.title %}
@@ -11,7 +11,7 @@
     {% endif %}
   </title>
 
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
   <meta name="keywords" content="developer, desenvolvedor, front-end, html5, javascript, css3, webmobile, responsivo, rj, rio de janeiro" />
   <meta name="author" content="Gabriel Sepulveda" />
 
@@ -29,12 +29,12 @@
   <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
   <meta name="twitter:image" content="https://lh5.googleusercontent.com/-StJPyczR_sk/AAAAAAAAAAI/AAAAAAAAAnk/4hWbq5JZSvs/s120-c/photo.jpg" />
 
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
-
   <link rel="author" href="https://plus.google.com/u/0/111231457098834630949"/>
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicon.ico" />
 
-  <link rel="stylesheet" href="{{ "/assets/screen.css" | prepend: site.baseurl }}">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ "/assets/screen.css" | prepend: site.baseurl }}" />
 
 </head>
