@@ -4,174 +4,224 @@
    ========================================================================== */
 
 @media only screen and (max-width: 479px) {
-    h2 { font-size: 2.2rem; }
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+
+    &.big {
+      font-size: 1.3rem;
+      padding: 15px 0;
+    }
+  }
+
+  #quem-sou {
     p {
-        font-size: 1.3rem;
-        &.big {
-            font-size: 1.3rem;
-            padding: 15px 0;
-        }
+      font-size: 1.4rem;
+
+      &.bigger {
+        font-size: 2rem;
+      }
     }
-    #quem-sou {
-        p {
-            font-size: 1.4rem;
-            &.bigger {
-                font-size: 2rem;
-            }
-        }
-    }
+  }
 }
+
 @media only screen and (min-width: 480px) and (max-width: 719px) {
-    h2 { font-size: 2.5rem; }
-    #quem-sou {
-        p {
-            font-size: 1.5rem;
-            &.bigger {
-                font-size: 2.5rem;
-            }
-        }
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  #quem-sou {
+    p {
+      font-size: 1.5rem;
+
+      &.bigger {
+        font-size: 2.5rem;
+      }
     }
-    .coluna-flex {
-        width: 100%;
-        display: inline-block;
-        padding: 15px;
-        padding-left: 200px;
-        margin-bottom: 25px;
-        @include border-radius(15px);
-        .ico-text {
-            // position: absolute;
-            // left: 25px;
-        }
+  }
+
+  .coluna-flex {
+    width: 100%;
+    display: inline-block;
+    padding: 15px;
+    padding-left: 200px;
+    margin-bottom: 25px;
+    @include border-radius(15px);
+
+    .ico-text {
+      // position: absolute;
+      // left: 25px;
     }
-    .my-life { padding: 50px 25px; }
-    .about {
-        padding-top: 250px;
-        padding-bottom: 30px;
-        height: 560px;
-        color: #fff;
-        display: table-cell;
-        vertical-align: middle;
-        position: fixed;
-        top:0;
-        width: 100%;
-        p {
-            font-size: 4rem;
-            line-height: 1.3rem;
-            margin: 15px 0;
-            @include text-shadow(1px 1px 0px #000);
-            &.bigger {
-                font-size: 6rem;
-                margin-bottom: 100px;
-            }
-        }
+  }
+
+  .my-life {
+    padding: 50px 25px;
+  }
+
+  .about {
+    padding-top: 250px;
+    padding-bottom: 30px;
+    height: 560px;
+    color: #fff;
+    display: table-cell;
+    vertical-align: middle;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    p {
+      font-size: 4rem;
+      line-height: 1.3rem;
+      margin: 15px 0;
+      @include text-shadow(1px 1px 0px #000);
+
+      &.bigger {
+        font-size: 6rem;
+        margin-bottom: 100px;
+      }
     }
-    .content {
-        position: relative;
-        margin-top: 610px;
-        padding: 50px 0;
-        z-index: 5;
-        //@include box-shadow(0px -3px 5px rgba(0,0,0,0.5));
-    }
+  }
+
+  .content {
+    position: relative;
+    margin-top: 610px;
+    padding: 50px 0;
+    z-index: 5;
+    //@include box-shadow(0px -3px 5px rgba(0,0,0,0.5));
+  }
 }
 
 @media only screen and (min-width: 720px) and (max-width: 1000px) {
-    #quem-sou {
-        p {
-            font-size: 2rem;
-            &.bigger {
-                font-size: 3rem;
-            }
-        }
+  #quem-sou {
+    p {
+      font-size: 2rem;
+
+      &.bigger {
+        font-size: 3rem;
+      }
     }
+  }
 }
+
 @media only screen and (min-width: 720px) and (max-width: 1179px) {
-    .box-content {
-        padding-left: 7%;
-        padding-right: 7%;
-    }
+  .box-content {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
 }
+
 @media only screen and (max-width: 1000px) {
-    h1 {
-        font-size: 2rem;
-        margin-bottom: 1em;
-    }
-    h3 {
-        position: relative;
-        padding: 5px 10px;
-        background: rgba(0,0,0,0.75);
-        color: #fff;
-        z-index: 10;
-    }
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1em;
+  }
+
+  h3 {
+    position: relative;
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    z-index: 10;
+  }
 }
 
 @media only screen and (min-width: 1001px) {
-    .main {
-        background-image: inline-image("../images/bg.jpg");
+  .main {
+    background-image: inline-image("../images/bg.jpg");
+  }
+
+  h1 {
+    padding-top: 40px;
+  }
+
+  #wrapper {
+    padding-top: 0;
+  }
+
+  #nav {
+    position: relative;
+    background: none;
+    clear: none;
+    float: right;
+    left: auto;
+    top: 25px;
+    width: auto;
+  }
+
+  .nav-link {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 25px 20px;
+    @include box-shadow(none);
+
+    &:before {
+      content: '';
     }
-    h1 { padding-top: 40px; }
-    #wrapper { padding-top: 0; }
-    #nav {
-        position: relative;
-        background: none;
-        clear: none;
-        float: right;
-        left: auto;
-        top: 25px;
-        width: auto;
+
+    &:hover,
+    &:focus {
+      background: rgba(0, 50, 60, 0.5);
     }
-    .nav-link {
-        background: rgba(0, 0, 0, 0.05);
-        padding: 25px 20px;
-        @include box-shadow(none);
-        &:before { content: ''; }
-        &:hover, &:focus {
-            background: rgba(0, 50, 60, 0.5);
-        }
+  }
+
+  .ico-nav {
+    display: none;
+  }
+
+  .nav-item {
+    float: left;
+  }
+
+  .header {
+    position: relative;
+    height: 120px;
+  }
+
+  .bg-main {
+    display: none;
+    position: absolute;
+    width: 125%;
+    height: 125%;
+    background: #CCC;
+    top: -50%;
+    left: -50%;
+    @include transform(rotate(-45deg));
+  }
+
+  .box-flex {
+    width: 32%;
+
+    h3 {
+      margin-top: 75px;
+      padding-bottom: 15px;
     }
-    .ico-nav { display: none; }
-    .nav-item {
-        float: left;
-    }
-    .header {
-        position: relative;
-        height: 120px;
-    }
-    .bg-main {
-        display: none;
-        position: absolute;
-        width: 125%;
-        height: 125%;
-        background: #CCC;
-        top: -50%;
-        left: -50%;
-        @include transform(rotate(-45deg));
-    }
-    .box-flex {
-        width: 32%;
-        h3 {
-            margin-top: 75px;
-            padding-bottom: 15px;
-        }
-    }
-    .job {
-        //padding: 0px;
-    }
-    .job-img {
-        @include transition( all 0.4s ease-out);
-        @include transform(scale(1));
-    }
+  }
+
+  .job {
+    //padding: 0px;
+  }
+
+  .job-img {
+    @include transition(all 0.4s ease-out);
+    @include transform(scale(1));
+  }
 }
+
 @media only screen and (min-width: 1000px) and (max-width: 1100px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-    .nav-link {
-        padding: 15px 10px;
-    }
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .nav-link {
+    padding: 15px 10px;
+  }
 }
+
 @media only screen and (min-width: 1180px) {
-    .box-content {
-        padding-left: 10%;
-        padding-right: 10%;
-    }
+  .box-content {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
 }
