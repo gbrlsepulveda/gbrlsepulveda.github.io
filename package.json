@@ -8,5 +8,13 @@
 		"type": "git",
 		"url": "https://github.com/gbrlsepulveda/gbrlsepulveda.github.io"
 	},
-	"author": "Gabriel Sepulveda"
+	"author": "Gabriel Sepulveda",
+	"scripts": {
+		"start": "docker run --rm -v $PWD:/src -w /src bhrutledge/compass watch",
+		"build": "docker run --rm -v $PWD:/src -w /src bhrutledge/compass build",
+		"serve": "http-server -p 3000"
+	},
+	"devDependencies": {
+		"http-server": "^0.11.1"
+	}
 }
