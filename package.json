@@ -1,20 +1,31 @@
 {
-	"name": "gbrlsepulveda-github-io",
-	"version": "1.0.0",
-	"description": "My personal page",
-	"homepage": "http://gbrlsepulveda.github.io/",
-	"main": "index.html",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/gbrlsepulveda/gbrlsepulveda.github.io"
-	},
-	"author": "Gabriel Sepulveda",
-	"scripts": {
-		"start": "docker run --rm -v $PWD:/src -w /src bhrutledge/compass watch",
-		"build": "docker run --rm -v $PWD:/src -w /src bhrutledge/compass build",
-		"serve": "http-server -p 3000"
-	},
-	"devDependencies": {
-		"http-server": "^0.11.1"
-	}
+ "name": "gbrlsepulveda-github-io",
+ "version": "2.0.0",
+ "description": "My personal page",
+ "homepage": "http://gbrlsepulveda.github.io/",
+ "main": "public/index.html",
+ "private": true,
+ "repository": {
+  "type": "git",
+  "url": "https://github.com/gbrlsepulveda/gbrlsepulveda.github.io"
+ },
+ "engines": {
+  "node": ">=14"
+ },
+ "author": "Gabriel Sepulveda",
+ "scripts": {
+  "dev": "next dev",
+  "build": "next build && next export",
+  "start": "next start"
+ },
+ "dependencies": {
+  "next": "^11.0.0",
+  "react": "17.0.2",
+  "react-dom": "17.0.2",
+  "styled-components": "^5.3.3"
+ },
+ "devDependencies": {
+  "babel-plugin-styled-components": "^1.13.3",
+  "prettier": "2.4.1"
+ }
 }
