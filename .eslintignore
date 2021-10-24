@@ -1,0 +1,25 @@
+# Ignore built folders
+app/j/dist/
+app/a/
+reports
+
+# Ignore static JS
+app/static/
+
+# Ignore external libs
+vendor/
+node_modules/
+app/j/vendor/
+includes/legacy_precompiled_libraries
+typescript/
+
+# Ignore non-ts build files, since they can't be in ES6
+build/**/*.js
+
+# Manually blacklist
+# Remove each file as it's converted to pass lint check
+app/j/image-zoom/
+
+# ignore generated js files
+tooling/fullstack_client_assets/*.js
+tooling/circleci/gcs/dist/*
